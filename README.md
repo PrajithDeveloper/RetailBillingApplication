@@ -6,4 +6,5 @@ Functionalities: Inventory management (CRUD operations), invoice  generation
   - Save sale
   - View Sale Details
   - Download sale invoice
+
 direct to url  http://localhost:8080/retailapp/home to startup
