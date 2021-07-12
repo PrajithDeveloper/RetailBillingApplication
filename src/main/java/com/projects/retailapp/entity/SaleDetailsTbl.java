@@ -1,6 +1,5 @@
 package com.projects.retailapp.entity;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import javax.persistence.Column;
@@ -13,36 +12,35 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-
 @Entity
-@Table(name="SaleDetailsTbl")
+@Table(name = "SaleDetailsTbl")
 public class SaleDetailsTbl {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="SaleDetailsID")
+	@Column(name = "SaleDetailsID")
 	private Long saleDetailsID;
-	
+
 	@NotNull
 	@ManyToOne
-	@JoinColumn(name="saleID")
+	@JoinColumn(name = "saleID")
 	private SalesTbl salesTbl;
-	
+
 	@NotNull
 	@ManyToOne
-	@JoinColumn(name="itemID")
+	@JoinColumn(name = "itemID")
 	private ItemTbl itemTbl;
-	
+
 	@NotNull
-	@Column(name="Qty")
+	@Column(name = "Qty")
 	private Integer qty;
-	
+
 	@NotNull
-	@Column(name="total")
+	@Column(name = "total")
 	private Long total;
-	
+
 	@NotNull
-	@Column(name="wefDate")
+	@Column(name = "wefDate")
 	private LocalDateTime wefDate;
 
 	public LocalDateTime getWefDate() {
@@ -92,6 +90,5 @@ public class SaleDetailsTbl {
 	public void setTotal(Long total) {
 		this.total = total;
 	}
-	
-	
+
 }

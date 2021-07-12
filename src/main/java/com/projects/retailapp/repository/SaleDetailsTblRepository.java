@@ -10,6 +10,10 @@ import com.projects.retailapp.entity.SaleDetailsTbl;
 
 public interface SaleDetailsTblRepository extends JpaRepository<SaleDetailsTbl, Long> {
 	
+	/*
+	 * To get SaleDetailsTbl corresponding to the saleID
+	 * 
+	 * */
 	@Query("SELECT saleDetailsTbl FROM SaleDetailsTbl saleDetailsTbl "
 			+ "WHERE saleDetailsTbl.salesTbl.saleID =:saleID " )
 	List<SaleDetailsTbl> findAllItemsBySaleID(@Param("saleID") Long saleID);

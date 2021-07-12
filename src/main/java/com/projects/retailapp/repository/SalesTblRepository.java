@@ -7,6 +7,9 @@ import com.projects.retailapp.entity.SalesTbl;
 
 public interface SalesTblRepository extends JpaRepository<SalesTbl, Long> {
 	
+	/*
+	 * Finds the last added sale
+	 * */
 	@Query("SELECT salesTbl "
 			+ " FROM SalesTbl salesTbl "
 			+ "WHERE salesTbl.saleID = (SELECT MAX (salesTbl.saleID) FROM SalesTbl salesTbl) ")

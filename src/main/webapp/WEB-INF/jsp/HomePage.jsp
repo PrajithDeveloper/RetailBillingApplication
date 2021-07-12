@@ -2,29 +2,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>MainPage</title>
+<title>Home Page</title>
 <style type="text/css">
 body {
 	background-color: #f3f3f3;
-
 }
-
 ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	/* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
-	/* background-color: #333; */
 	background-color: lightgrey;
-	/* border-radius: 5px; */
 	width: 100%;
 }
-
 li {
 	float: left;
 }
-
 li a, .dropbtn, .user, .date-value {
 	display: inline-block;
 	color: black;
@@ -32,15 +25,12 @@ li a, .dropbtn, .user, .date-value {
 	padding: 14px 16px;
 	text-decoration: none;
 }
-
 li a:hover, .dropdown:hover .dropbtn {
 	background-color: red;
 }
-
 li.dropdown {
 	display: inline-block;
 }
-
 .dropdown-content {
 	display: none;
 	position: absolute;
@@ -49,7 +39,6 @@ li.dropdown {
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 	z-index: 1;
 }
-
 .dropdown-content a {
 	color: black;
 	padding: 12px 16px;
@@ -57,27 +46,21 @@ li.dropdown {
 	display: block;
 	text-align: left;
 }
-
 .dropdown-content a:hover {
 	background-color: #f1f1f1
 }
-
 .dropdown:hover .dropdown-content {
 	display: block;
 }
-
 li.user {
 	color: black;
 	width: 800px;
 }
-
 .add-product {
-	/*margin-left: 25%;*/
 	width: 100%;
 	text-align: center;
 	position: fixed;
 }
-
 table {
 	border: 1px solid black;
 	text-align: center;
@@ -87,18 +70,15 @@ table {
 	background-color: #f3f3f3;
 	margin: 0 auto;
 }
-
 th, td {
 	border: 1px solid black;
 	border-collapse: collapse;
 	padding: 5px;
 	text-align: left;
 }
-
 tr:nth-child(even) {
 	background-color: #dddddd;
 }
-
 #add {
 	background-color: #85adad;
 	border: none;
@@ -109,24 +89,18 @@ tr:nth-child(even) {
 	padding: 5px;
 	border-radius: 5px;
 	cursor: pointer;
-	/* text-align: center;
-	text-decoration: none;
-	outline: none; */
 	color: #fff;
 	background-color: #33bbff;
 	box-shadow: 0 5px #999;
 }
-
 #add:hover {
 	background: #0099e6;
 }
-
 #add:active {
 	background-color: #0099e6;
 	box-shadow: 0 2px #666;
 	transform: translateY(2px);
 }
-
 #addItemForm {
 	max-width: 300px;
 	padding: 10px;
@@ -138,7 +112,6 @@ tr:nth-child(even) {
 	z-index: 90;
 	display: none;
 }
-
 .addItemForm-btn {
 	width: 100px;
 	height: 30px;
@@ -189,75 +162,57 @@ input.addItemForm-input{
 	border: 3px solid #f1f1f1;
 	z-index: 90;
 	position: fixed;
-	/*margin:0 auto;*/
 }
-
 #sale-bill-view {
 	display: none;
 }
-
 #enter-menu {
 	padding: 10px;
 	width: 75%;
 	float: left;
 }
-
 #total-menu {
 	padding: 10px;
 	float: right;
 	height: 300px;
 }
-
 #view-bill {
 	display: none;
 	text-align: center;
 	overflow: scroll;
 	height: 450px;
 }
-
 table.sale-bill-table {
 	width: 100%;
 }
-
 .date-value {
 	background-color: lightgrey;
 	float: right;
 }
-
 .main-div {
-	/* border-radius: 5px; */
 	margin: auto;
 	border: 1px grey;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 	background-color: white;
-	/* width: 97%; */
 	width: 1100px;
 	height: 500px;
-	/* position: fixed; */
 	text-align: center;
-
-	/* margin: 5px 5px 5px 5px; */
 }
-
 input.total-amt {
 	border: none;
 	font-weight: bold;
 	width: 100px;
 }
-
 input.total-qty {
 	width: 100px;
 }
-
 .scrollit {
 	overflow: scroll;
 	height: 300px;
 }
-
 button.save-new {
 	z-index: 0;
 }
-
 input.sale {
 	width: 150px;
 	height: 30px;
@@ -308,7 +263,6 @@ button.btns:active {
 <!--  <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>   -->
 <script src="/jquery/jquery-2.1.4.min.js"></script>
-<!-- <script src="jquery-2.1.4.min.js"></script> -->
 <script type="text/javascript">
 	$(document).ready(function(){
 		
@@ -510,7 +464,10 @@ button.btns:active {
 				$("#view-stock").append('<tr><th>SlNo</th><th>Barcode</th><th>Item Name</th><th>MRP</th><th>Rate</th><th>Stock Qty</th></tr>');
 				$("#stock").click();
 				$('#delete-all-form').hide();
-			}
+			},
+		error:function(){
+			alert("Error");
+		}
 		});
 	});
 	$("#delete-all-cancel").click(function(){
@@ -715,8 +672,9 @@ button.btns:active {
 	//save and refresh the sale bill page
 	$('#save-new').click(function(){
 		var phone =$('#phone').val();
-		var pattern = $('#phone').attr('pattern');
-		var re = new RegExp(pattern);
+			var pattern = $('#phone').attr('pattern');
+			var re = new RegExp(pattern);
+		
 		
 		if($('#total-items').val()===''){
 			alert("Error");
@@ -725,7 +683,7 @@ button.btns:active {
 			alert("please enter valid phone number");
 		}
 		else{
-			//processing single api call to save
+			//processing api call to save
 			var mainArray = new Array();
 			var customerName = $('#customerName').val();
 			var phoneNo = $('#phone').val();
@@ -894,7 +852,7 @@ button.btns:active {
 				name="customerName" id="customerName" placeholder="customer name"
 				class="sale-input"> <label>Phone :</label> <input type="text"
 				name="phone" id="phone" placeholder="phone number" class="sale-input"
-				required="required" pattern="[0-9]{10}"> <br> <br> <input
+				 pattern="[0-9]{10}" title="enter 10 digit number"> <br> <br> <input
 				list="barcode-list" type="text" name="barcode-value"
 				id="barcode-sale" placeholder="Barcode search" class="value-search"
 				autocomplete="off" />

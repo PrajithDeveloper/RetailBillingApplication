@@ -11,6 +11,9 @@ public class ItemTblValidate {
 	@Autowired
 	private RetailAppRepository retailAppRepository;
 	
+	/*
+	 * Validating the entity
+	 * */
 	public String validateEntity(ItemTbl itemTbl, String MODE) {
 		
 		if (!(validateName(itemTbl.getName())))
@@ -41,7 +44,7 @@ public class ItemTblValidate {
 			if (barcode.isEmpty() || barcode.isBlank() || !(barcode.matches("^[0-9]*$")) || barcode.length() != 10)
 				return false;
 			if (MODE.equals("INSERT")) {
-				if (retailAppRepository.findByBarcode(barcode) != null)
+				if (!retailAppRepository.findItemByBarcodes(barcode).isEmpty())
 					return false;
 			}
 
