@@ -63,16 +63,6 @@ public class RetailAppService {
 		return itemTbl;
 	}
 
-	/*
-	 * Deletes the ItemTbl
-	 */
-	public String deleteTbl() {
-		if (retailAppRepository.count() == 0) {
-			return "no data found";
-		}
-		retailAppRepository.deleteAll();
-		return "deleted table successfully";
-	}
 
 	/*
 	 * Delete Item by itemID

@@ -24,6 +24,8 @@
 		$('.date-value').val(dateLabel+today);
 	}	
 		$("#stock").click(function(){
+			$('.main-div').show();
+			$('.business').hide();
 			//hiding sale bill view 
 			$("#sale-bill-view").hide();
 				$('#view-bill').hide();
@@ -64,13 +66,13 @@
 		
 
 		$("#home").click(function(){
-			alert("home clicked");
+			$('.main-div').hide();
+			$('.business').show();
 		});
 		
 		$("#add").click(function(){
 			
 			$('#update-item').hide();
-			$('#delete-all-form').hide();
 			$("#addItemForm").show();
 			
 		});
@@ -113,7 +115,6 @@
 		
 		if(tid!=null){
 			$('#addItemForm').hide();
-			$('#delete-all-form').hide();
 		$("#update-item").show();
 		$.ajax({
 			type:'GET',
@@ -183,32 +184,11 @@
 	$("#uf-cancel").click(function(){
 		$("#update-item").hide();
 	});
-	$('#delete-all').click(function(){
-		$('#addItemForm').hide();
-		$('#update-item').hide();
-		$('#delete-all-form').show();
-	});
-	$("#delete-all-ok").click(function(){
-		$.ajax({
-			url:"deleteAll",
-			success:function(res){
-				alert(res);
-				$("#view-stock").empty();
-				$("#view-stock").append('<tr><th>SlNo</th><th>Barcode</th><th>Item Name</th><th>MRP</th><th>Rate</th><th>Stock Qty</th></tr>');
-				$("#stock").click();
-				$('#delete-all-form').hide();
-			},
-		error:function(){
-			alert("Error");
-		}
-		});
-	});
-	$("#delete-all-cancel").click(function(){
-		$('#delete-all-form').hide();
-	});
 
 	$("#salesBill").click(function(){
 			//alert("salesBill clicked");
+			$('.main-div').show();
+			$('.business').hide();
 			$("#productView").hide();
 			$('#view-bill').hide();
 			$("#sale-bill-view").show();
@@ -470,6 +450,8 @@
 	
 	//displaying view bill window
 	$('#viewBill').click(function(){
+		$('.main-div').show();
+			$('.business').hide();
 		$("#productView").hide();
 		$("#sale-bill-view").hide();
 		$('#view-bill').show();

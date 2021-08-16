@@ -1,6 +1,10 @@
 body {
-	background-color: #f3f3f3;
+	background-image: url('../image/background.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
 }
+
 ul {
 	list-style-type: none;
 	margin: 0;
@@ -8,10 +12,17 @@ ul {
 	overflow: hidden;
 	background-color: lightgrey;
 	width: 100%;
+	opacity: 0.8;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:    13px;
+	font-weight: bold;
+	display:flex;
 }
+
 li {
 	float: left;
 }
+
 li a, .dropbtn, .user, .date-value {
 	display: inline-block;
 	color: black;
@@ -19,12 +30,15 @@ li a, .dropbtn, .user, .date-value {
 	padding: 14px 16px;
 	text-decoration: none;
 }
+
 li a:hover, .dropdown:hover .dropbtn {
-	background-color: red;
+	background-color: white;
 }
+
 li.dropdown {
 	display: inline-block;
 }
+
 .dropdown-content {
 	display: none;
 	position: absolute;
@@ -33,6 +47,7 @@ li.dropdown {
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 	z-index: 1;
 }
+
 .dropdown-content a {
 	color: black;
 	padding: 12px 16px;
@@ -40,36 +55,42 @@ li.dropdown {
 	display: block;
 	text-align: left;
 }
+
 .dropdown-content a:hover {
 	background-color: #f1f1f1
 }
+
 .dropdown:hover .dropdown-content {
 	display: block;
 }
+
 li.user {
 	color: black;
 	width: 800px;
 }
+
 .add-product {
 	width: 100%;
 	text-align: center;
 	position: fixed;
 }
+
 table {
 	border: 1px solid black;
 	text-align: center;
 	width: 700px;
 	border-collapse: collapse;
-	/*background-color: #85adad;*/
 	background-color: #f3f3f3;
 	margin: 0 auto;
 }
+
 th, td {
 	border: 1px solid black;
 	border-collapse: collapse;
 	padding: 5px;
 	text-align: left;
 }
+
 tr:nth-child(even) {
 	background-color: #dddddd;
 }
@@ -88,14 +109,17 @@ tr:nth-child(even) {
 	background-color: #33bbff;
 	box-shadow: 0 5px #999;
 }
+
 #add:hover {
 	background: #0099e6;
 }
+
 #add:active {
 	background-color: #0099e6;
 	box-shadow: 0 2px #666;
 	transform: translateY(2px);
 }
+
 #addItemForm {
 	max-width: 300px;
 	padding: 10px;
@@ -107,6 +131,7 @@ tr:nth-child(even) {
 	z-index: 90;
 	display: none;
 }
+
 .addItemForm-btn {
 	width: 100px;
 	height: 30px;
@@ -116,24 +141,28 @@ tr:nth-child(even) {
 	color: #0099e6;
 	margin: 5px;
 }
-input{
-font-family: 'Open Sans', sans-serif;
+
+input {
+	font-family: 'Open Sans', sans-serif;
 }
+
 .addItemForm-btn:hover {
 	background-color: #0099e6;
 	color: white;
 }
-input.addItemForm-input{
+
+input.addItemForm-input {
 	font-family: 'Open Sans', sans-serif;
-	font-size : 14px;
-	width : 150px;
-	height : 20px;
+	font-size: 14px;
+	width: 150px;
+	height: 20px;
 	border-radius: 10px;
 	text-align: center;
-	border :1px solid black;
-	 margin: 0 0 5px;
-	 outline: none;
+	border: 1px solid black;
+	margin: 0 0 5px;
+	outline: none;
 }
+
 #productView {
 	display: none;
 }
@@ -152,29 +181,35 @@ input.addItemForm-input{
 #sale-bill-view {
 	display: none;
 }
+
 #enter-menu {
 	padding: 10px;
 	width: 75%;
 	float: left;
 }
+
 #total-menu {
 	padding: 10px;
 	float: right;
 	height: 300px;
 }
+
 #view-bill {
 	display: none;
 	text-align: center;
 	overflow: scroll;
 	height: 450px;
 }
+
 table.sale-bill-table {
 	width: 100%;
 }
+
 .date-value {
 	background-color: lightgrey;
 	float: right;
 }
+
 .main-div {
 	margin: auto;
 	border: 1px grey;
@@ -183,41 +218,49 @@ table.sale-bill-table {
 	width: 1100px;
 	height: 500px;
 	text-align: center;
+	display:none;
 }
+
 input.total-amt {
 	border: none;
 	font-weight: bold;
 	width: 100px;
 }
+
 input.total-qty {
 	width: 100px;
 }
+
 .scrollit {
 	overflow: scroll;
-	height: 300px;
+	height:300px;
 }
+
 button.save-new {
 	z-index: 0;
 }
+
 input.sale {
 	width: 150px;
 	height: 30px;
 	font: bold 20px solid black;
 }
-input.sale-input{
+
+input.sale-input {
 	width: 200px;
 	height: 25px;
-	border-radius : 5px;
-	border : 1px solid grey;
-	outline : none;
+	border-radius: 5px;
+	border: 1px solid grey;
+	outline: none;
 }
+
 input.value-search {
 	width: 250px;
 	height: 25px;
-	border-radius : 5px;
-	border : 1px solid grey;
-	outline : none;
-	margin:10px;
+	border-radius: 5px;
+	border: 1px solid grey;
+	outline: none;
+	margin: 10px;
 }
 
 button.btns {
@@ -245,8 +288,20 @@ button.btns:active {
 	box-shadow: 0 2px #666;
 	transform: translateY(4px);
 }
-#msg-box{
-	display: none;
+.business{
+	color:white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:30px;
+	margin-top:10%;
+	margin-left: auto;
+    margin-right: auto;
+    width: 8em;
+    position:relative;
+    display:flex;
+	
+}
+.view-stock-div{
 	text-align: center;
-	background-color: white;
+	overflow: scroll;
+	height: 400px;
 }

@@ -24,6 +24,10 @@
 		<li><input type="text" class='date-value' disabled="disabled"
 			value='Date : ' /></li>
 	</ul>
+	<div class="business">
+	<h1>MEN'S CORNER</h1>
+	</div>
+	
 	<div class='main-div'>
 		<div id="productView">
 			<br>
@@ -63,8 +67,8 @@
 				<button id="uf-cancel">CANCEL</button>
 
 			</div>
-			<div class="scrollit">
-				<table id="view-stock" class="view-stock">
+			<div class="view-stock-div">
+				<table id="view-stock" class="scrollit">
 					<tr>
 						<th>SlNo.</th>
 						<th>Barcode</th>
@@ -74,10 +78,6 @@
 						<th>Stock Qty</th>
 					</tr>
 				</table>
-			</div>
-
-			<div id="msg-box">
-				<label>Double click to update items</label>
 			</div>
 			<br> <br>
 			</div>

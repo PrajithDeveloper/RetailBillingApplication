@@ -76,13 +76,6 @@ public class RetailAppController {
 		return itemTbl;
 	}
 	
-	/* Deletes the ItemTbl
-	 */
-	@RequestMapping("deleteAll")
-	public String deleteTbl() {
-		return retailAppService.deleteTbl();
-
-	}
 	
 	/* Deletes item by itemID
 	 */
