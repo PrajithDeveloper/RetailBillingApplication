@@ -3,269 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Home Page</title>
-<style type="text/css">
-body {
-	background-color: #f3f3f3;
-}
-ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: lightgrey;
-	width: 100%;
-}
-li {
-	float: left;
-}
-li a, .dropbtn, .user, .date-value {
-	display: inline-block;
-	color: black;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-li a:hover, .dropdown:hover .dropbtn {
-	background-color: red;
-}
-li.dropdown {
-	display: inline-block;
-}
-.dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #f9f9f9;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
-}
-.dropdown-content a {
-	color: black;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-	text-align: left;
-}
-.dropdown-content a:hover {
-	background-color: #f1f1f1
-}
-.dropdown:hover .dropdown-content {
-	display: block;
-}
-li.user {
-	color: black;
-	width: 800px;
-}
-.add-product {
-	width: 100%;
-	text-align: center;
-	position: fixed;
-}
-table {
-	border: 1px solid black;
-	text-align: center;
-	width: 700px;
-	border-collapse: collapse;
-	/*background-color: #85adad;*/
-	background-color: #f3f3f3;
-	margin: 0 auto;
-}
-th, td {
-	border: 1px solid black;
-	border-collapse: collapse;
-	padding: 5px;
-	text-align: left;
-}
-tr:nth-child(even) {
-	background-color: #dddddd;
-}
-#add {
-	background-color: #85adad;
-	border: none;
-	float: right;
-	margin-right: 10%;
-	height: 30px;
-	width: 150px;
-	padding: 5px;
-	border-radius: 5px;
-	cursor: pointer;
-	color: #fff;
-	background-color: #33bbff;
-	box-shadow: 0 5px #999;
-}
-#add:hover {
-	background: #0099e6;
-}
-#add:active {
-	background-color: #0099e6;
-	box-shadow: 0 2px #666;
-	transform: translateY(2px);
-}
-#addItemForm {
-	max-width: 300px;
-	padding: 10px;
-	background-color: white;
-	position: fixed;
-	text-align: center;
-	right: 15px;
-	border: 3px solid #f1f1f1;
-	z-index: 90;
-	display: none;
-}
-.addItemForm-btn {
-	width: 100px;
-	height: 30px;
-	border-radius: 5px;
-	border: 1px solid #0099e6;
-	background-color: white;
-	color: #0099e6;
-	margin: 5px;
-}
-input{
-font-family: 'Open Sans', sans-serif;
-}
-.addItemForm-btn:hover {
-	background-color: #0099e6;
-	color: white;
-}
-input.addItemForm-input{
-	font-family: 'Open Sans', sans-serif;
-	font-size : 14px;
-	width : 150px;
-	height : 20px;
-	border-radius: 10px;
-	text-align: center;
-	border :1px solid black;
-	 margin: 0 0 5px;
-	 outline: none;
-}
-#productView {
-	display: none;
-}
-
-#update-item {
-	display: none;
-	padding: 70px 70px;
-	text-align: center;
-	background-color: white;
-	border: 3px solid #f1f1f1;
-	z-index: 90;
-	position: fixed;
-	margin-left: 25%;
-}
-
-#delete-all-form {
-	display: none;
-	padding: 35px 70px;
-	text-align: center;
-	background-color: white;
-	border: 3px solid #f1f1f1;
-	z-index: 90;
-	position: fixed;
-}
-#sale-bill-view {
-	display: none;
-}
-#enter-menu {
-	padding: 10px;
-	width: 75%;
-	float: left;
-}
-#total-menu {
-	padding: 10px;
-	float: right;
-	height: 300px;
-}
-#view-bill {
-	display: none;
-	text-align: center;
-	overflow: scroll;
-	height: 450px;
-}
-table.sale-bill-table {
-	width: 100%;
-}
-.date-value {
-	background-color: lightgrey;
-	float: right;
-}
-.main-div {
-	margin: auto;
-	border: 1px grey;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	background-color: white;
-	width: 1100px;
-	height: 500px;
-	text-align: center;
-}
-input.total-amt {
-	border: none;
-	font-weight: bold;
-	width: 100px;
-}
-input.total-qty {
-	width: 100px;
-}
-.scrollit {
-	overflow: scroll;
-	height: 300px;
-}
-button.save-new {
-	z-index: 0;
-}
-input.sale {
-	width: 150px;
-	height: 30px;
-	font: bold 20px solid black;
-}
-input.sale-input{
-	width: 200px;
-	height: 25px;
-	border-radius : 5px;
-	border : 1px solid grey;
-	outline : none;
-}
-input.value-search {
-	width: 250px;
-	height: 25px;
-	border-radius : 5px;
-	border : 1px solid grey;
-	outline : none;
-	margin:10px;
-}
-
-button.btns {
-	border-radius: 5px;
-	border: none;
-	height: 30px;
-	width: 150px;
-	display: inline-block;
-	padding: 5px;
-	cursor: pointer;
-	text-align: center;
-	text-decoration: none;
-	outline: none;
-	color: #fff;
-	background-color: #33bbff;
-	box-shadow: 0 5px #999;
-}
-
-button.btns:hover {
-	background-color: #0099e6;
-}
-
-button.btns:active {
-	background-color: #0099e6;
-	box-shadow: 0 2px #666;
-	transform: translateY(4px);
-}
-</style>
+<link rel="stylesheet" href="/css/mystyle.css">
 <!--  <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>   -->
 <script src="/jquery/jquery-2.1.4.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		
 		var tid=null;
 		var tblBarcode, tblItemName, tMrp, tRate, tStock;
 		var updateFlag=false;
@@ -288,8 +31,7 @@ button.btns:active {
 		today = dd + '-' + mm + '-' + yyyy;
 		var dateLabel =$('.date-value').val();
 		$('.date-value').val(dateLabel+today);
-	}
-	
+	}	
 		$("#stock").click(function(){
 			//hiding sale bill view 
 			$("#sale-bill-view").hide();
@@ -794,16 +536,19 @@ button.btns:active {
 			<div id="addItemForm" class="addItemForm">
 				<form id="add-new">
 					<h4>Add New Item</h4>
-					<input type="text" title="Must be characters" name="itemName" id="itemName" class="addItemForm-input"
-						placeholder="itemName" autocomplete="off" required> <input  title="Must be Number with length 10"
-						type="text" id="barcode" name="barcode"  class="addItemForm-input" placeholder="barcode"
-						autocomplete="off" required="required">
-						 <input
-						type="text" title="Must be a number" id="MRP" name="MRP" placeholder="MRP"  class="addItemForm-input"
-						required="required"> <input type="text" id="rate" title="Rate must be less than MRP"
-						name="rate" placeholder="Rate" required="required"  class="addItemForm-input"> <input
-						type="text" id="stockqty" name="stockqty" placeholder="Stock Qty"  class="addItemForm-input"
-						required="required"> <br>
+					<input type="text" title="Must be characters" name="itemName"
+						id="itemName" class="addItemForm-input" placeholder="itemName"
+						autocomplete="off" required> <input
+						title="Must be Number with length 10" type="text" id="barcode"
+						name="barcode" class="addItemForm-input" placeholder="barcode"
+						autocomplete="off" required="required"> <input type="text"
+						title="Must be a number" id="MRP" name="MRP" placeholder="MRP"
+						class="addItemForm-input" required="required"> <input
+						type="text" id="rate" title="Rate must be less than MRP"
+						name="rate" placeholder="Rate" required="required"
+						class="addItemForm-input"> <input type="text"
+						id="stockqty" name="stockqty" placeholder="Stock Qty"
+						class="addItemForm-input" required="required"> <br>
 					<button type="button" class="addItemForm-btn" id="addItem">ADD</button>
 					<button type="reset" class="addItemForm-btn" id="reset">RESET</button>
 					<button type="button" class="addItemForm-btn" id="cancel">CANCEL</button>
@@ -822,13 +567,6 @@ button.btns:active {
 				<button id="uf-cancel">CANCEL</button>
 
 			</div>
-
-			<div id="delete-all-form">
-				<label>Are you sure want to delete all items?</label> <br>
-				<button id="delete-all-ok">Proceed</button>
-				<button id="delete-all-cancel">Cancel</button>
-			</div>
-
 			<div class="scrollit">
 				<table id="view-stock" class="view-stock">
 					<tr>
@@ -841,21 +579,21 @@ button.btns:active {
 					</tr>
 				</table>
 			</div>
+
+			<div id="msg-box">
+				<label>Double click to update items</label>
+			</div>
 			<br> <br>
-			<button type="button" id="delete-all" class="btns">Delete
-				All</button>
-
-
-		</div>
+			</div>
 		<div id="sale-bill-view">
 			<br> <label>Customer Name :</label> <input type="text"
 				name="customerName" id="customerName" placeholder="customer name"
-				class="sale-input"> <label>Phone :</label> <input type="text"
-				name="phone" id="phone" placeholder="phone number" class="sale-input"
-				 pattern="[0-9]{10}" title="enter 10 digit number"> <br> <br> <input
-				list="barcode-list" type="text" name="barcode-value"
-				id="barcode-sale" placeholder="Barcode search" class="value-search"
-				autocomplete="off" />
+				class="sale-input"> <label>Phone :</label> <input
+				type="text" name="phone" id="phone" placeholder="phone number"
+				class="sale-input" pattern="[0-9]{10}" title="enter 10 digit number">
+			<br> <br> <input list="barcode-list" type="text"
+				name="barcode-value" id="barcode-sale" placeholder="Barcode search"
+				class="value-search" autocomplete="off" />
 			<datalist id="barcode-list"></datalist>
 			<input type="text" name="name-search" id="name-search"
 				placeholder="Name search" list="name-list" class="value-search"
@@ -866,7 +604,7 @@ button.btns:active {
 				<div class="scrollit">
 					<table id="sale-bill-table" class="sale-bill-table">
 						<tr>
-							<th>ID</th>
+							<th>Id</th>
 							<th>Item Name</th>
 							<th>Barcode</th>
 							<th>Stock</th>
