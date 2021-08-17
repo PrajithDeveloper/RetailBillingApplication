@@ -100,7 +100,7 @@
 				<div class="scrollit">
 					<table id="sale-bill-table" class="sale-bill-table">
 						<tr>
-							<th>Id</th>
+							<th>ID</th>
 							<th>Item Name</th>
 							<th>Barcode</th>
 							<th>Stock</th>

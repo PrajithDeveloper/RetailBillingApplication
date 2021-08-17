@@ -136,7 +136,7 @@
 	});
 	$("#uf-edit").click(function(){
 		$.ajax({
-			type : 'POST',
+			type : 'PUT',
 			url :"http://localhost:8080/retailapp/update",
 			data :{
 				itemID:tid,
@@ -161,7 +161,7 @@
 	
 	$("#uf-delete").click(function(){
 		$.ajax({
-			type : 'POST',
+			type : 'DELETE',
 			url :"delete",
 			data :{
 				itemID:tid,
@@ -451,7 +451,7 @@
 	//displaying view bill window
 	$('#viewBill').click(function(){
 		$('.main-div').show();
-			$('.business').hide();
+		$('.business').hide();
 		$("#productView").hide();
 		$("#sale-bill-view").hide();
 		$('#view-bill').show();
