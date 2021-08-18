@@ -10,11 +10,11 @@ ul {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: lightgrey;
+	background-color: #fefae0;
 	width: 100%;
 	opacity: 0.8;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size:    13px;
+	font-family: monospace,Arial, Helvetica, sans-serif;
+	font-size:    14px;
 	font-weight: bold;
 	display:flex;
 }
@@ -32,7 +32,7 @@ li a, .dropbtn, .user, .date-value {
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-	background-color: white;
+	background-color: red;
 }
 
 li.dropdown {
@@ -143,9 +143,9 @@ tr:nth-child(even) {
 }
 
 input {
-	font-family: 'Open Sans', sans-serif;
+	font-family:monospace, Arial, Helvetica, sans-serif;
+	 font-size:14px;
 }
-
 .addItemForm-btn:hover {
 	background-color: #0099e6;
 	color: white;
@@ -212,13 +212,12 @@ table.sale-bill-table {
 
 .main-div {
 	margin: auto;
-	border: 1px grey;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 	background-color: white;
 	width: 1100px;
 	height: 500px;
 	text-align: center;
 	display:none;
+	border-radius: 4px;
 }
 
 input.total-amt {
@@ -290,7 +289,7 @@ button.btns:active {
 }
 .business{
 	color:white;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family:monospace, Arial, Helvetica, sans-serif;
 	font-size:30px;
 	margin-top:10%;
 	margin-left: auto;
