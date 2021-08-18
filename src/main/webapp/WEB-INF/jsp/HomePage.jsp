@@ -128,7 +128,7 @@
 
 		</div>
 		<div id='view-bill' class='view-bill'>
-			<label>PREVIOUS BILLS</label> <br>
+		 <label>PREVIOUS BILLS</label> <br>
 			<table id='sales-table' class="scrollit">
 				<tr>
 					<th>SLNO</th>
