@@ -3,8 +3,8 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
+	background-color: #606c38;
 }
-
 ul {
 	list-style-type: none;
 	margin: 0;
