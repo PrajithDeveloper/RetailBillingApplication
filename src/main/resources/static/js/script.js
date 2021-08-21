@@ -361,7 +361,8 @@
 		
 		var rowCount =($('#sale-bill-table tr').length)-1;
 		if(rowCount>0){
-			if($('#qty').val()>0){
+			var qty = $('#qty').val();
+			if(qty>0 || qty ===undefined ){
 				//setting total items
 				$('#total-items').val(rowCount);
 				//getting table values
@@ -370,8 +371,12 @@
 						total+=parseFloat($(this).val());
 				});
 				$('#total-payable').val(total);
+				
+				//setting delete last button inactive
+				$('#delete-last').prop("disabled", true);
 			}
 			else{
+				alert();
 				alert("please add valid quantity");
 			}
 			
@@ -380,6 +385,16 @@
 			alert("please add items..");
 		}
 		
+	});
+	//delete last item added to table
+	$('#delete-last').click(function(){
+		var rowCount = ($('#sale-bill-table tr').length) - 1;
+		if(rowCount>0){
+			$('#sale-bill-table tr:last').remove();
+			
+		}else{
+			alert("no item added!");
+		}
 	});
 	
 	//save and refresh the sale bill page
@@ -446,6 +461,8 @@
 		$('#total-payable').val('');
 		$('#customerName').val('');
 		$('#phone').val('');
+		//setting delete last button active
+		$('#delete-last').prop("disabled", false);
 	}
 	
 	//displaying view bill window

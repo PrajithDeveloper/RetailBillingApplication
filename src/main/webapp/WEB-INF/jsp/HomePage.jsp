@@ -83,10 +83,8 @@
 			</div>
 		<div id="sale-bill-view">
 			<br> <label>Customer Name :</label> <input type="text"
-				name="customerName" id="customerName" placeholder="customer name"
-				class="sale-input"> <label>Phone :</label> <input
-				type="text" name="phone" id="phone" placeholder="phone number"
-				class="sale-input" pattern="[0-9]{10}" title="enter 10 digit number">
+				name="customerName" id="customerName" class="sale-input"> <label>Phone :</label> <input
+				type="text" name="phone" id="phone" class="sale-input" pattern="[0-9]{10}" title="enter 10 digit number">
 			<br> <br> <input list="barcode-list" type="text"
 				name="barcode-value" id="barcode-sale" placeholder="Barcode search"
 				class="value-search" autocomplete="off" />
@@ -113,6 +111,7 @@
 				</div>
 				<br>
 				<button id="proceed" class="btns">PROCEED</button>
+				<button id="delete-last" class="btns">DELETE LAST ITEM</button>
 			</div>
 			<div id="total-menu">
 				<label>Total Items</label><br> <input type="text"
