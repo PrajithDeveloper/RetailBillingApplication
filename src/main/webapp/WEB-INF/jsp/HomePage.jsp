@@ -68,7 +68,7 @@
 
 			</div>
 			<div class="view-stock-div">
-				<table id="view-stock" class="scrollit">
+				<table id="view-stock" class="scrollit" title="double click on item to edit">
 					<tr>
 						<th>SlNo.</th>
 						<th>Barcode</th>
