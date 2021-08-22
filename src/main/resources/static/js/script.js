@@ -253,7 +253,9 @@
 
 	//enter barcode number in textfield and search for barcodes
 	$("#name-search").on("keyup", function() {
-		datalistName.empty();
+		var qtyValue = $('#qty').val();
+		if( qtyValue === undefined || qtyValue>0){
+				datalistName.empty();
    console.log($(this).val());
   nameSearchValue = $(this).val();
    
@@ -295,6 +297,11 @@
    	   		});
    	}
    });
+		}else{
+			alert("quantity is invalid");
+			$('#name-search').val('');
+		}
+	
 	
 });
 	
