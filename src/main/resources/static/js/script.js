@@ -244,7 +244,7 @@
 		}
 		else 
 		{
-			alert("quantity is invalid");
+			alert("add valid quantity on the last item");
 			$('#barcode-sale').val('');
 		}
 	
@@ -298,7 +298,7 @@
    	}
    });
 		}else{
-			alert("quantity is invalid");
+			alert("add valid quantity on the last item");
 			$('#name-search').val('');
 		}
 	
