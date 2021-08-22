@@ -421,7 +421,7 @@
 		
 		
 		if($('#total-items').val()===''){
-			alert("Error");
+			alert("please add items to list");
 		}
 		else if(!re.test(phone) || phone.length>10){
 			alert("please enter valid phone number");
