@@ -194,9 +194,12 @@
 			$("#sale-bill-view").show();
 		});
 	
+	
 	//enter barcode number in textfield and search for barcodes
 	$("#barcode-sale").on("keyup", function() {
-		datalist.empty();
+		var qtyValue = $('#qty').val();
+		if( qtyValue === undefined || qtyValue>0){
+				datalist.empty();
    console.log($(this).val());
   barcode = $(this).val();
    
@@ -238,6 +241,13 @@
    	   		});
    	}
    });
+		}
+		else 
+		{
+			alert("quantity is invalid");
+			$('#barcode-sale').val('');
+		}
+	
 	
 });
 
@@ -376,7 +386,6 @@
 				$('#delete-last').prop("disabled", true);
 			}
 			else{
-				alert();
 				alert("please add valid quantity");
 			}
 			
